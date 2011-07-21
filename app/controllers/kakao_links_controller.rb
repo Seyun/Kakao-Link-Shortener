@@ -84,7 +84,8 @@ class KakaoLinksController < ApplicationController
   end
 
   def get_kakao_link (msg, url, appid, appver)
-    "kakaolink://sendurl?msg="+msg+"&url="+url+"&appid="+appid+"&appver="+appver
+    link = "kakaolink://sendurl?msg="+msg+"&url="+url+"&appid="+appid+"&appver="+appver
+    URI::escape(link)
   end
     
   def encode_id(i)
