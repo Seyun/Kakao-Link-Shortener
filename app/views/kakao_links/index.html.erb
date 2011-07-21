@@ -1,0 +1,33 @@
+<h1>Listing kakao_links</h1>
+
+<table>
+  <tr>
+    <th>Original</th>
+    <th>Short</th>
+    <th>Msg</th>
+    <th>Url</th>
+    <th>Appid</th>
+    <th>Appver</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @kakao_links.each do |kakao_link| %>
+  <tr>
+    <td><%= kakao_link.original %></td>
+    <td><%= kakao_link.short_url %></td>
+    <td><%= kakao_link.msg %></td>
+    <td><%= kakao_link.url %></td>
+    <td><%= kakao_link.appid %></td>
+    <td><%= kakao_link.appver %></td>
+    <td><%= link_to 'Show', kakao_link %></td>
+    <td><%= link_to 'Edit', edit_kakao_link_path(kakao_link) %></td>
+    <td><%= link_to 'Destroy', kakao_link, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Kakao link', new_kakao_link_path %>

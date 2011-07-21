@@ -1,0 +1,15 @@
+<h1>Kakao Link</h1>
+<%= render 'form' %>
+
+<% if @original != nil %>
+<p>
+	<b>Original:</b>
+	<%= @original %>
+</p>
+<% end %>
+<% if @short_url != nil %>
+<p>
+	<b>Short url:</b>
+	<%= @short_url %>
+</p>
+<% end %> 

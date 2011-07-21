@@ -1,0 +1,41 @@
+<%= form_for(@kakao_link) do |f| %>
+  <% if @kakao_link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@kakao_link.errors.count, "error") %> prohibited this kakao_link from being saved:</h2>
+
+      <ul>
+      <% @kakao_link.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<!--   <div class="field">
+    <%= f.label :original %><br />
+    <%= f.text_field :original %>
+  </div>
+  <div class="field">
+    <%= f.label :encoded_id %><br />
+    <%= f.text_field :encoded_id %>
+  </div> -->  
+  <div class="field">
+    <%= f.label :msg %>
+    <%= f.text_field :msg %>
+  </div>
+  <div class="field">
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :appid %>
+    <%= f.text_field :appid %>
+  </div>
+  <div class="field">
+    <%= f.label :appver %>
+    <%= f.text_field :appver %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

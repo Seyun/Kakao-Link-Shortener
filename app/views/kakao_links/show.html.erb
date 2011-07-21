@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Original:</b>
+  <%= @kakao_link.original %>
+</p>
+
+<p>
+  <b>Short url:</b>
+  <%= @kakao_link.short_url %>
+</p>
+
+<p>
+  <b>Msg:</b>
+  <%= @kakao_link.msg %>
+</p>
+
+<p>
+  <b>Appid:</b>
+  <%= @kakao_link.appid %>
+</p>
+
+<p>
+  <b>Appver:</b>
+  <%= @kakao_link.appver %>
+</p>
+
+
+<%= link_to 'Edit', edit_kakao_link_path(@kakao_link) %> |
+<%= link_to 'Back', kakao_links_path %>
